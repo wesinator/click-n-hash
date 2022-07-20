@@ -1,6 +1,12 @@
+importScripts('./hash.js', './include/crypto-api.min.js')
 
-function displayHash(hash) {
-    hashStr = String.raw`${hashType}: ${hash}\n\nText:\n'${selectionOutput}'\n`; 
+function displayHash(hashText, hashType, hash) {
+    // truncate long text String
+    var selectionOutput = hashText.substring(0,4096);
+      if (hashText.length > 4096)
+          selectionOutput = selectionOutput + "...";
+
+    hashStr = `${hashType.toUpperCase()}: ${hash}\n\nText:\n'${selectionOutput}'\n`; 
     console.log(hashStr);
     alert(hashStr);
 }
@@ -9,43 +15,36 @@ function displayHash(hash) {
 hashTheText = function(info, tab) {
     var hashText = info.selectionText;
     var hashType = info.menuItemId;
+    var hash = null;
     
     switch (hashType) {
-    case "MD5":
-      hash = md5(info.selectionText);
-      break;
-    case "SHA1":
-      hash = sha1(info.selectionText);
-      break;
-    case "SHA256":
-      hash = sha256(info.selectionText);
-      break;
-    case "SHA512":
-      hash = sha512(info.selectionText);
-      break;
-  }
+        case "md5":
+            hash = md5(info.selectionText);
+            break;
+        case "sha1":
+            hash = sha1(info.selectionText);
+            break;
+        case "sha256":
+            hash = sha256(info.selectionText);
+            break;
+        case "sha512":
+            hash = sha512(info.selectionText);
+            break;
+    }
 
   if (hash) {
       var selectionOutput = info.selectionText.substring(0,4096);
       if (info.selectionText.length > 4096)
           selectionOutput = selectionOutput + "...";
-
-      browser.tabs.executeScript({
-          code: `
-                hashStr = String.raw\`${hashType}: ${hash}\n\nText:\n'${selectionOutput}'\n\`; 
-                console.log(hashStr);
-                alert(hashStr);`
-      });
       
       // display the hash in browser alert
-      const tabId = getTabId();
       chrome.scripting.executeScript({
-          target: {tabId: tabId},
+          target: {tabId: tab.id},
           func: displayHash,
-          args: [hash]
+          args: [hashText, hashType, hash]
       });
   }
-}
+};
 
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({

@@ -8,6 +8,7 @@ import {fromUtf} from "./crypto-api/src/encoder/utf";*/
 
 // https://github.com/nf404/crypto-api#es6-recommended
 
+
 /*export*/ function md5(contents) {
     //console.log("in md5")
     return CryptoApi.hash('md5', contents);
