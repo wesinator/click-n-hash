@@ -3,15 +3,12 @@
   "name": "Click'n'Hash",
   "short_name": "Hash selected text and pages in the browser",
   "description": "Adds a context menu to take hashes of selected text and pages in the browser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minimum_chrome_version": "88",
   "permissions": [
     "contextMenus",
     "scripting",
     "activeTab"
-  ],
-  "host_permissions": [
-    "*://*/*"
   ],
   "icons": {
     "64": "assets/clicknhash-64x64.png"
