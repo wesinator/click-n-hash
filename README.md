@@ -1,3 +1,5 @@
-# CyberChef Chrome Extension
+# Click'n'Hash
 
-A basic chrome extension that allows you to open selected text in CyberChef using the context menu (right click). Despite this code not being updated in 5 years, it is still functional and maintained as of 2022.
+A manifest v3 Chromium extension that allows you to hash selected text using the context menu (right click).
+
+Firefox version is [HashZilla](https://github.com/wesinator/HashZilla/)
