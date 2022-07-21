@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Click'n'Hash",
-  "short_name": "Hash selected text and pages in the browser",
+  "short_name": "click-n-hash",
   "description": "Adds a context menu to take hashes of selected text and pages in the browser",
   "version": "0.1.1",
   "minimum_chrome_version": "88",
