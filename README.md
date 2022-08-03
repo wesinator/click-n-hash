@@ -1,8 +1,14 @@
 # Click'n'Hash
 
+[link-cws]: https://chrome.google.com/webstore/detail/clicknhash/pjjlbppplhnijdjaegiahoacpehkmcdl
+
 A manifest v3 Chromium extension that allows you to hash selected text using the context menu (right click).
 
 Firefox version is [HashZilla](https://github.com/wesinator/HashZilla/)
+
+### Install
+
+<img src="https://raw.githubusercontent.com/alrra/browser-logos/90fdf03c/src/chrome/chrome.svg" width="16" alt="Chrome" valign="middle"> [<img valign="middle" src="https://img.shields.io/chrome-web-store/v/pjjlbppplhnijdjaegiahoacpehkmcdl.svg">][link-cws] [<img valign="middle" src="https://img.shields.io/chrome-web-store/users/pjjlbppplhnijdjaegiahoacpehkmcdl.svg">][link-cws]
 
 #### Known issues (specific to Chrome extension)
 
