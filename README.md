@@ -4,7 +4,9 @@
 
 A manifest v3 Chromium extension that allows you to hash selected text using the context menu (right click).
 
-Firefox version is [HashZilla](https://github.com/wesinator/HashZilla/)
+Firefox version is [HashZilla](https://github.com/wesinator/HashZilla/).
+
+Uses [crypto-api](https://github.com/nf404/crypto-api) v0.8.5 library.
 
 ### Install
 
