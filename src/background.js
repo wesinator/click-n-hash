@@ -33,10 +33,6 @@ hashTheText = function(info, tab) {
     }
 
   if (hash) {
-      var selectionOutput = info.selectionText.substring(0,4096);
-      if (info.selectionText.length > 4096)
-          selectionOutput = selectionOutput + "...";
-      
       // display the hash in browser alert
       chrome.scripting.executeScript({
           target: {tabId: tab.id},
