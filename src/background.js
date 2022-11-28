@@ -6,7 +6,7 @@ function displayHash(hashText, hashType, hash) {
       if (hashText.length > 4096)
           selectionOutput = selectionOutput + "...";
 
-    hashStr = `${hashType.toUpperCase()}: ${hash}\n\nText:\n'${selectionOutput}'\n`; 
+    hashStr = `${hashType.toUpperCase()}: ${hash}\n\n${chrome.i18n.getMessage("TextHeading")}\n'${selectionOutput}'\n`; 
     console.log(hashStr);
     alert(hashStr);
 }
@@ -45,7 +45,7 @@ hashTheText = function(info, tab) {
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
         id: "md5",
-        title: "MD5 (insecure)",
+        title: chrome.i18n.getMessage("MD5"),
         contexts: ["selection"]
     });
     
@@ -57,19 +57,19 @@ chrome.runtime.onInstalled.addListener(() => {
     
     chrome.contextMenus.create({
         id: "sha1",
-        title: "SHA1 (insecure)",
+        title: chrome.i18n.getMessage("SHA1"),
         contexts: ["selection"]
     });
     
     chrome.contextMenus.create({
         id: "sha256",
-        title: "SHA256",
+        title: chrome.i18n.getMessage("SHA256"),
         contexts: ["selection"]
     });
     
     chrome.contextMenus.create({
         id: "sha512",
-        title: "SHA512",
+        title: chrome.i18n.getMessage("SHA512"),
         contexts: ["selection"]
     });
 });
