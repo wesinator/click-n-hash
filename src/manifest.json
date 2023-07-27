@@ -3,7 +3,7 @@
   "name": "Click'n'Hash",
   "short_name": "click-n-hash",
   "description": "Adds a context menu to take hashes of selected text and pages in the browser",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "default_locale": "en",
   "minimum_chrome_version": "88",
   "permissions": [
